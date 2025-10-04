@@ -18,7 +18,7 @@ const products: Product[] = [
   {
     id: "basic-plan",
     name: "Basic Plan",
-    price: 199000,
+    price: 200000,
     features: [
       "Smart Automation Basic",
       "Basic Analytics",
