@@ -4,19 +4,18 @@ interface PatternBackgroundProps {
   children: ReactNode;
   className?: string;
   id?: string;
-  variant?: "light" | "dark";
 }
 
-export const PatternBackground = ({ children, className = "", id, variant = "light" }: PatternBackgroundProps) => (
-  <section id={id} className={`relative ${variant === "dark" ? "bg-primary text-primary-foreground" : "bg-background"} ${className}`}>
+export const PatternBackground = ({ children, className = "", id }: PatternBackgroundProps) => (
+  <section id={id} className={`relative bg-background ${className}`}>
     <div className="relative">
       {/* Dashed Grid Pattern */}
       <div
-        className={`absolute inset-0 z-0 ${variant === "dark" ? "opacity-10" : "opacity-30"}`}
+        className="absolute inset-0 z-0 opacity-30"
         style={{
           backgroundImage: `
-            linear-gradient(to right, ${variant === "dark" ? "hsl(var(--primary-foreground))" : "hsl(var(--border))"} 1px, transparent 1px),
-            linear-gradient(to bottom, ${variant === "dark" ? "hsl(var(--primary-foreground))" : "hsl(var(--border))"} 1px, transparent 1px)
+            linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+            linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px)
           `,
           backgroundSize: "20px 20px",
           backgroundPosition: "0 0, 0 0",

@@ -20,7 +20,7 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section id="features" className="w-full py-20 md:py-32 bg-primary text-primary-foreground">
+    <section id="features" className="w-full py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12">
           Everything You Need
@@ -32,7 +32,7 @@ export const FeaturesSection = () => {
                 <img src={feature.image} alt={feature.title} className="w-full h-full object-cover" />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-foreground">{feature.title}</h3>
+                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
               </CardContent>
             </Card>
